@@ -3,7 +3,7 @@
 #include <ListViewConstants.au3>
 #include <FileConstants.au3>
 #include <StringConstants.au3>
-#include <CheckSumVerify.au3>
+;#include <CheckSumVerify.au3>
 #include <KDMemory2.au3>
 #include <Array.au3>
 #include <Misc.au3>
@@ -47,7 +47,8 @@ $processName = "SomaWindow.exe"; Don't edit any of thee, it will break the bot
 $processId = ProcessExists($processName); Don't edit any of thee, it will break the bot
 $handles = _KDMemory_OpenProcess($processId) ; Opens memory to be called upon
 AutoItSetOption("mousecoordmode", 2) ; Don't edit any of thee, it will break the bot
-Global $NameOfSomaWindow = IniRead("Settings.ini", "Settings", "NameOfSomaWindow", "Myth of Soma : Molten Meltdown")
+
+Global $NameOfSomaWindow = IniRead("Settings.ini", "Settings", "NameOfSomaWindow", "Myth of Soma")
 If Not WinActive($NameOfSomaWindow) Then
 	WinActivate($NameOfSomaWindow)
 	WinWaitActive($NameOfSomaWindow)
